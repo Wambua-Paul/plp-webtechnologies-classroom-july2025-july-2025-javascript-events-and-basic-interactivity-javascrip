@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Page with Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Website</h1>
+
+      <!-- Feature 1: Change Background Color -->
+      <section>
+        <h2>Change Background Color</h2>
+        <button id="colorBtn">Change Background</button>
+      </section>
+
+      <!-- Feature 2: Live Character Count -->
+      <section>
+        <h2>Message Box with Character Count</h2>
+        <textarea
+          id="messageBox"
+          placeholder="Type your message..."
+          maxlength="200"
+        ></textarea>
+        <p><span id="charCount">0</span>/200 characters</p>
+      </section>
+
+      <!-- Form with Custom Validation -->
+      <section>
+        <h2>Contact Form</h2>
+        <form id="contactForm" novalidate>
+          <label>
+            Name:
+            <input type="text" id="name" />
+            <span class="error" id="nameError"></span>
+          </label>
+
+          <label>
+            Email:
+            <input type="text" id="email" />
+            <span class="error" id="emailError"></span>
+          </label>
+
+          <label>
+            Message:
+            <textarea id="formMessage" maxlength="300"></textarea>
+            <span class="error" id="messageError"></span>
+          </label>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
